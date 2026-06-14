@@ -1,25 +1,25 @@
 class Sshelf < Formula
   desc "A TUI for managing and connecting to SSH hosts — generates the ssh command, never touches ~/.ssh/config."
   homepage "https://github.com/max-rh/sshelf"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.2.0/sshelf-aarch64-apple-darwin.tar.xz"
-      sha256 "1fd6acea6b069e23ba14ca45b98339c3b2ea514a682a7aca534ff35a7e00816a"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.3.0/sshelf-aarch64-apple-darwin.tar.xz"
+      sha256 "ca376635829cd26148d5b0f92d8942dada8cb8706d107a4760f7b6c971d1f9e2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.2.0/sshelf-x86_64-apple-darwin.tar.xz"
-      sha256 "7055a8e193f5073f22ec8665cf5ca3825423ad44d1e8310f7092e3ff6e98abd5"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.3.0/sshelf-x86_64-apple-darwin.tar.xz"
+      sha256 "73ea3eca78540eef125607769fc4c048efd9ba0cdfdf51696da8d293766200a1"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.2.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e6dc7c4c97b359754a3ff40c197e946e1425b0b6d653c1536f12903eeb86e47e"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.3.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "75e9e282fb69f71fb57628a5c76d2fb25c259f7f6e62835e284d9b8c17f0f9a1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.2.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "ca001272b3a5a21644a8e398938becf0fd30f3cd8b822005acdcf0734d0ef90d"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.3.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "abcd81eec29a5ca723e23f19e6c6e23e72a7c2710e6d556ed1750787205d5c03"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
