@@ -1,25 +1,25 @@
 class Sshelf < Formula
   desc "Fast terminal UI for your SSH hosts: fuzzy-search and connect, transfer files over SFTP, and run background port forwards — keeps its own host database and never edits ~/.ssh/config."
   homepage "https://max-rh.github.io/sshelf"
-  version "0.10.0"
+  version "0.11.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.10.0/sshelf-aarch64-apple-darwin.tar.xz"
-      sha256 "ff65a3418fde1b715b851af8181a7fe4d6fe733f344016805e670ef114c0d178"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-aarch64-apple-darwin.tar.xz"
+      sha256 "762370282489ed705c13e53492f3b970d0412caee57785eafff138f3255cd060"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.10.0/sshelf-x86_64-apple-darwin.tar.xz"
-      sha256 "1b57f2f2d368dfe6aa307755513681b7dfdd4e6d9d4434345f2f6ea14cb38123"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-x86_64-apple-darwin.tar.xz"
+      sha256 "8a86ab751ed5ac9dd59ee7838cd02d6eb737e378c7d5b00d58566b4a471d5719"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.10.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6cf2deb947d37d643b4a8d914d4e76f6847849227146d902dc9186bddf4997af"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "0524bd12677cb7c3571fb9e4fd6cb6f3a6e300ec7585ae84bfd778c26a2d65aa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.10.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0ccd64f8896bf89fe52a8362d51329c4a420749cf0fe6491d706265492ceff0b"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "1f513f73cd80d32f9bd9e2f59683150510c79643f31c8c9362151995cd200f5c"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
