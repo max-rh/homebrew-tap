@@ -1,25 +1,25 @@
 class Sshelf < Formula
   desc "Fast terminal UI for your SSH hosts: fuzzy-search and connect, transfer files over SFTP, and run background port forwards — keeps its own host database and never edits ~/.ssh/config."
   homepage "https://max-rh.github.io/sshelf"
-  version "0.11.0"
+  version "0.12.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-aarch64-apple-darwin.tar.xz"
-      sha256 "762370282489ed705c13e53492f3b970d0412caee57785eafff138f3255cd060"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.12.0/sshelf-aarch64-apple-darwin.tar.xz"
+      sha256 "ffe4fa1f16849b71a6a822d2b122f827d4717e069968712fd08758c04ef36cb6"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-x86_64-apple-darwin.tar.xz"
-      sha256 "8a86ab751ed5ac9dd59ee7838cd02d6eb737e378c7d5b00d58566b4a471d5719"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.12.0/sshelf-x86_64-apple-darwin.tar.xz"
+      sha256 "e44a3f475cea489dbbfbc05380df24bec70b403390caa2053f37773e12741817"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "0524bd12677cb7c3571fb9e4fd6cb6f3a6e300ec7585ae84bfd778c26a2d65aa"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.12.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "976c99430c6c944e1b2f545cb82d91d6828788e9100a1ca12035ea7f533de3be"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.11.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1f513f73cd80d32f9bd9e2f59683150510c79643f31c8c9362151995cd200f5c"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.12.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "8a97b8fde7014fcf2098f7da4dbfb759fa323a1070da0f2d5df0843c107a8482"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
@@ -47,10 +47,18 @@ class Sshelf < Formula
   end
 
   def install
-    bin.install "sshelf" if OS.mac? && Hardware::CPU.arm?
-    bin.install "sshelf" if OS.mac? && Hardware::CPU.intel?
-    bin.install "sshelf" if OS.linux? && Hardware::CPU.arm?
-    bin.install "sshelf" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "sshelf"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "sshelf"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "sshelf"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "sshelf"
+    end
 
     install_binary_aliases!
 
