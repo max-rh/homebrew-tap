@@ -1,25 +1,25 @@
 class Sshelf < Formula
-  desc "Fast terminal UI for your SSH hosts: fuzzy-search and connect, transfer files over SFTP, and run background port forwards — keeps its own host database and never edits ~/.ssh/config."
+  desc "Fast terminal UI for your SSH hosts: fuzzy-search and connect, transfer files over SFTP, and run background port forwards. Keeps its own host database and never edits ~/.ssh/config."
   homepage "https://max-rh.github.io/sshelf"
-  version "0.13.1"
+  version "0.14.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.13.1/sshelf-aarch64-apple-darwin.tar.xz"
-      sha256 "fd6fd7567d243f9d9287be9c14f0dd14001cdbd2cd37dc2284ff76b661904c03"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.14.0/sshelf-aarch64-apple-darwin.tar.xz"
+      sha256 "e8d20dcd821a18915d3d46deb7c304c631e6169f0cddb176e43eede7910618ae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.13.1/sshelf-x86_64-apple-darwin.tar.xz"
-      sha256 "b3ee1d887f979feeeacd22a196307132069894949e059fca2bb54f7fcb1d1aa1"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.14.0/sshelf-x86_64-apple-darwin.tar.xz"
+      sha256 "2a9fa86aca4a7ba29591c221928c000bd739ec9972c2e175de53c3778353661a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.13.1/sshelf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "7c886d792fb6990266a7b5d5035abc7a41c0d9664a7f412363d6e1a93dff5c53"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.14.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "dc6a4686253735e1be1e9d1dad11f1f5a8480aed13c8cbc1bb339d19ec2deb27"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.13.1/sshelf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "fb5cf399f9117d1ffa14315beff8d03206bec6ee5a5719c9550d72f5c532f1b5"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.14.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c2e79af40cb0bb446573269a0c895b3d8078f9906c525a03a9b8f128be3d0867"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
