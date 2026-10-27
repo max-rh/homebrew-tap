@@ -1,25 +1,25 @@
 class Sshelf < Formula
   desc "Fast terminal UI for your SSH hosts: fuzzy-search and connect, transfer files over SFTP, and run background port forwards. Keeps its own host database and never edits ~/.ssh/config."
   homepage "https://max-rh.github.io/sshelf"
-  version "0.15.0"
+  version "0.16.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.15.0/sshelf-aarch64-apple-darwin.tar.xz"
-      sha256 "f664c1f664ee50d7698fc248ab8763e37835adfceea9dd8d6a321048d85c282a"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.16.0/sshelf-aarch64-apple-darwin.tar.xz"
+      sha256 "132f98c214fdb34cc614dcbb8c2eec92545aa063b364bd85b42319fc38c462ff"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.15.0/sshelf-x86_64-apple-darwin.tar.xz"
-      sha256 "ea85a9b424aa961d0391b2301fb0b6055636145272c85a0b60b7bfdaad55dff9"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.16.0/sshelf-x86_64-apple-darwin.tar.xz"
+      sha256 "f66c646f5f2461629686eb1f28e62e435a580995d5385f3a6a8b2668f7af4d6d"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.15.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "df3d5160a6048e025764132cabbf0a59fe7e978c70e53acbf63de5f6ea545882"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.16.0/sshelf-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2d2ab28d4daf30d3f4b933377859de07f8a27e9c116cb264102662a17fcb1ea0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/max-rh/sshelf/releases/download/v0.15.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "1d1a697235e24919b1d852cb02f6fec896a91cef1d6dda2f0f52c6b9af6f22e7"
+      url "https://github.com/max-rh/sshelf/releases/download/v0.16.0/sshelf-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d43f36c7359bab99185479c2ac0acff020282be81f69ec9a92b6ab6ffdc03aa9"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
